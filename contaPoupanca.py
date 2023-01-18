@@ -1,6 +1,7 @@
 from conta import Conta
 '''Classe Conta poupança que implementa o tipo da classe Conta'''
 class ContaPoupanca(Conta):
+    '''Construtor da classe'''
     def __init__(self, nome, banco, numeroConta, saldo, limite,rendimento):
         super().__init__(nome, banco, numeroConta, saldo, limite)
         self.__rendimento=rendimento

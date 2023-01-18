@@ -13,6 +13,7 @@ class Pessoa:
     def nome(self):
         return self.__nome
     '''setter de nome'''
+    @nome.setter
     def set_nome(self,nome):
         self.__nome=nome
     '''getter de telefone'''
@@ -20,6 +21,7 @@ class Pessoa:
     def telefone(self):
         return self.__telefone
     '''setter de telefone'''
+    @telefone.setter
     def set_telefone(self,telefone):
         self.__telefone=telefone
     '''getter de taxa'''
@@ -27,6 +29,7 @@ class Pessoa:
     def cpf(self):
         return self.__cpf
     '''setter de cpf'''
+    @cpf.setter
     def set_cpf(self,cpf):
         self.__cpf=cpf
     '''getter de conta'''
@@ -34,6 +37,7 @@ class Pessoa:
     def conta(self):
         return self.__conta
     '''setter de conta'''
+    @conta.setter
     def set_conta(self,conta):
         self.__conta=conta
     '''getter de taxa'''
@@ -41,5 +45,6 @@ class Pessoa:
     def senha(self):
         return self.__senha
     '''setter de senha'''
+    @senha.setter
     def set_senha(self,senha):
         self.__senha=senha
