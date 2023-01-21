@@ -17,4 +17,9 @@ class Cliente(Pessoa,ManipuladorPedidoMixin):
         self.__login=login
     '''Método que paga um pedido'''
     def pagarPedido(self,codigo):
-        pass
+        pedido= next(x for x in self.pedido if x.get_codigo() == codigo )
+        pedido.set_status("Pago")
+        print("Reserva paga")
+    '''Método que escreve as informações da classe'''
+    def __str__(self):
+        return ("nome: {}\ncpf: {}\ntelefone: {}\n".format(super().nome,super().cpf,super().telefone))

@@ -8,6 +8,7 @@ class Operador(Pessoa,ManipuladorPedidoMixin):
         super().__init__(nome, telefone, cpf, conta, senha)
         self.__matricula=matricula
         self._salario=salario
+    '''Getter de matrícula'''
     @property
     def matricula(self):
         return self.__matricula
@@ -15,6 +16,7 @@ class Operador(Pessoa,ManipuladorPedidoMixin):
     @matricula.setter
     def set_matricula(self,matricula):
         self.__matricula=matricula
+    '''Getter de salario'''
     @property
     def salario(self):
         return self.__salario

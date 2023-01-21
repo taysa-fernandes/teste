@@ -2,12 +2,11 @@
 from cliente import Cliente
 class Pedido:
     '''Construtor da classe'''
-    def __init__(self,produto,valorProduto,quantidade,cliente,codigo,status="Aguardando pagamento",):
+    def __init__(self,produto,valorProduto,quantidade,cliente,status="Aguardando pagamento",):
        self.__produto=produto
        self.__valorProduto=valorProduto
        self.__quantidade=quantidade
        self.__cliente=cliente
-       self.codigo=codigo
        self.status=status
     '''Getter de Produto'''
     @property
@@ -41,3 +40,9 @@ class Pedido:
     @cliente.setter
     def set_cliente(self,cliente):
         self.__cliente=cliente
+    '''método que escreve as informações da classe'''
+    def __str__(self):
+        return ("Produto: {}\nvalor: {}\nquantidade: {}\n,cliente: {}\nstatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__cliente,self.status))
+    '''Método que sobrescreve o str e o passa para classe que utiliza a classe Pedido'''
+    def __repr__(self):
+         return ("Produto: {}\nvalor: {}\nquantidade: {}\n,cliente: {}\nstatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__cliente,self.status))
