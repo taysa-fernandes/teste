@@ -4,10 +4,11 @@ from Pessoa import Pessoa
 from manipuladorDePedidoMixin import ManipuladorPedidoMixin
 class Operador(Pessoa,ManipuladorPedidoMixin):
     '''Construtor da classe'''
-    def __init__(self, nome, telefone, cpf, conta, senha,matricula,salario):
+    def __init__(self, nome, telefone, cpf, conta, senha,matricula,salario,situacao="Ativo"):
         super().__init__(nome, telefone, cpf, conta, senha)
         self.__matricula=matricula
         self._salario=salario
+        self.situacao=situacao
     '''Getter de matrícula'''
     @property
     def matricula(self):

@@ -17,21 +17,22 @@ produto2=Produto(4,"lápis")
 manipularPedido= ManipuladorPedidoMixin()
 manipularPedido.criarPedido(pedido)
 print(manipularPedido.pedidos)
-manipularPedido.cancelarPedido(9178)-esse tbm da erro
+manipularPedido.cancelarPedido(pedido)
 print(manipularPedido.pedidos)'''
-'''gerente=Gerente("Lucas","(56)95783-8964","123-675-890-90",conta2,"esprin5")
+gerente=Gerente("Lucas","(56)95783-8964","123-675-890-90",conta2,"esprin5")
 gerente.criarOperador(operador)
 print(gerente.operadores)
-gerente.removerOperador(2299)-esse da erro
+gerente.removerOperador(operador)
+print(operador.situacao)
 print(gerente.operadores)
-gerente.criarCliente(cliente)
+'''gerente.criarCliente(cliente)
 print(gerente.clientes)
-gerente.removerCliente(cliente)--esse é oq da erro
+gerente.removerCliente(cliente)
 print(gerente.clientes)'''
-manipularEstoque=ManipuladorEstoqueMixin()
+'''manipularEstoque=ManipuladorEstoqueMixin()
 manipularEstoque.add_estoque(produto)
 print(manipularEstoque.estoques)
 manipularEstoque.remover_estoque(produto)
 print(manipularEstoque.estoques)
 manipularEstoque.atualizar_estoque(produto,produto2)
-print(manipularEstoque.estoques)
+print(manipularEstoque.estoques)'''

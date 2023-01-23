@@ -2,12 +2,13 @@
 from cliente import Cliente
 class Pedido:
     '''Construtor da classe'''
-    def __init__(self,produto,valorProduto,quantidade,cliente,status="Aguardando pagamento",):
+    def __init__(self,produto,valorProduto,quantidade,cliente,codigo=None,status="Aguardando pagamento"):
        self.__produto=produto
        self.__valorProduto=valorProduto
        self.__quantidade=quantidade
        self.__cliente=cliente
        self.status=status
+       self.codigo=codigo
     '''Getter de Produto'''
     @property
     def produto(self):

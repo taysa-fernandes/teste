@@ -11,9 +11,10 @@ class ManipuladorPedidoMixin:
         print(pedido.codigo)
         self.pedidos.append(pedido)
         print("Pedido criado!")
+    '''Sobrescrevendo método que deleta instancia de objetos'''
+    def __del__(self):
+         print ("cancelado")
     '''Método que cancela o pedido'''
-    def cancelarPedido(self,codigo):
-        pedido= next(x for x in self.pedidos if x.codigo == codigo)
-        pedido.set_status("Cancelado")
-        self.pedidos.pop(codigo)
-        print("pedido cancelado")
+    def cancelarPedido(self,pedido):
+        pedido.status="Cancelado"
+        self.__del__()

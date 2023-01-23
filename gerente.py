@@ -17,9 +17,13 @@ class Gerente(Pessoa,ManipuladorPedidoMixin):
         print(codigoOperador)
         self.operadores.append(operador)
         print("Operador criado!")
+    '''Sobrescrevendo método que deleta instancia de objetos'''
+    def __del__(self):
+         print ("removido")
     '''Método que apaga um operador'''
     def removerOperador(self,operador):
-        self.operadores.pop(operador)
+        operador.situacao="inativo"
+        self.__del__()
         print("Operador removido!")
     '''Método que cria um cliente(usuário)'''
     def criarCliente(self,cliente):
@@ -28,6 +32,7 @@ class Gerente(Pessoa,ManipuladorPedidoMixin):
         self.clientes.append(cliente)
         print("Cliente criado!")
     '''Método que apaga um cliente(usuário)'''
-    def removerCliente(self,codigo):
-        self.clientes.pop(codigo)
+    def removerCliente(self,cliente):
+        cliente.situacao="inativo"
+        self.__del__()
         print("Cliente removido!")
