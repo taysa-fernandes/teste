@@ -1,6 +1,8 @@
 from conta import Conta
+
 '''Classe que representa uma pessoa na vida real'''
-class Pessoa:
+class Pessoa():
+
     '''Construtor da classe'''
     def __init__(self,nome,telefone,cpf,conta,senha):
         self.__nome=nome
@@ -8,6 +10,9 @@ class Pessoa:
         self.__cpf=cpf
         self.__conta=conta
         self.__senha=senha
+
+#### Getters e Setters
+        
     '''getter de nome'''
     @property
     def nome(self):

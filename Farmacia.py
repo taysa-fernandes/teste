@@ -1,5 +1,7 @@
 '''Classe que simula uma farmácia'''
-class Farmacia:
+
+class Farmacia():
+
     '''Construtor da classe'''
     def __init__(self,nome,localizacao,cnpj,conta):
         self.__nome=nome
@@ -7,6 +9,9 @@ class Farmacia:
         self.__cnpj=cnpj
         self.__conta=conta
         self.pedidos=[]
+
+#### Getters e Setters
+
     '''Getter de nome'''
     @property
     def nome(self):

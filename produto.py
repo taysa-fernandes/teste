@@ -1,9 +1,13 @@
 '''classe que simula um produto'''
-class Produto:
+class Produto():
+
     '''Construtor da classe'''
     def __init__(self,quantidade,nome):
         self.__quantidade=quantidade
         self.__nome=nome
+
+#### Getters e Setters
+
     '''Getter de quantidade'''
     @property
     def quantidade(self):

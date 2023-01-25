@@ -1,10 +1,13 @@
-
 '''Classe que configura o pagamento do pedido'''
-class Pagamento:
+class Pagamento():
+
     '''Construtor da classe'''
     def __init__(self,valor,formaPagamento):
         self.__valor=valor
         self.__formaPagamento=formaPagamento
+
+#### Getters e Setters
+        
     '''getter de valor'''
     @property
     def valor(self):

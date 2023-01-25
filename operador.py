@@ -1,14 +1,19 @@
-
-'''Classe que simula o operador de caixa de uma farmácia'''
 from Pessoa import Pessoa
 from manipuladorDePedidoMixin import ManipuladorPedidoMixin
-class Operador(Pessoa,ManipuladorPedidoMixin):
+
+'''Classe que simula o operador de caixa de uma farmácia'''
+
+class Operador(Pessoa, ManipuladorPedidoMixin):
+
     '''Construtor da classe'''
     def __init__(self, nome, telefone, cpf, conta, senha,matricula,salario,situacao="Ativo"):
         super().__init__(nome, telefone, cpf, conta, senha)
         self.__matricula=matricula
         self._salario=salario
         self.situacao=situacao
+
+#### Getters e Setters
+
     '''Getter de matrícula'''
     @property
     def matricula(self):
