@@ -26,9 +26,10 @@ class Cliente(Pessoa, ManipuladorPedidoMixin):
 
     '''Método que paga um pedido'''
     def pagarPedido(self,codigo):
-        pedido= next(x for x in self.pedido if x.get_codigo() == codigo )
-        pedido.set_status("Pago")
-        print("Reserva paga")
+        #pedido= next(x for x in self.pedidos if x.get_codigo() == pedido.codigo )
+        for x in self.pedidos:
+            if x.codigo==codigo:
+                self.pedidos[x].status="pago"
 
 
     '''Método que escreve as informações da classe'''

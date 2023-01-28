@@ -5,11 +5,11 @@ from cliente import Cliente
 class Pedido():
 
     '''Construtor da classe'''
-    def __init__(self,produto,valorProduto,quantidade,cliente,codigo=None,status="Aguardando pagamento"):
+    def __init__(self,produto,valorProduto,quantidade,login,codigo=None,status="Aguardando pagamento"):
        self.__produto=produto
        self.__valorProduto=valorProduto
        self.__quantidade=quantidade
-       self.__cliente=cliente
+       self.__login=login
        self.status=status
        self.codigo=codigo
 
@@ -41,19 +41,19 @@ class Pedido():
         self.__quantidade=quantidade
     '''Getter de cliente'''
     @property
-    def cliente(self):
-        return self.__cliente
+    def login(self):
+        return self.__login
     '''setter de cliente'''
-    @cliente.setter
-    def set_cliente(self,cliente):
-        self.__cliente=cliente
+    @login.setter
+    def set_login(self,login):
+        self.__login=login
 
 
     '''método que escreve as informações da classe'''
     def __str__(self):
-        return ("Produto: {}\nValor: {}\nQuantidade: {}\n,Cliente: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__cliente,self.status))
+        return ("Produto: {}\nValor: {}\nQuantidade: {}\n,login: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__login,self.status))
 
 
     '''Método que sobrescreve o str e o passa para classe que utiliza a classe Pedido'''
     def __repr__(self):
-         return ("Produto: {}\nValor: {}\nQuantidade: {}\n,Cliente: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__cliente,self.status))
+         return ("Produto: {}\nValor: {}\nQuantidade: {}\n,login: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__login,self.status))

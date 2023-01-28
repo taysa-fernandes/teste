@@ -1,6 +1,6 @@
 from random import randint
 
-'''Classe que contra pedidos'''
+'''Classe que controla pedidos'''
 class ManipuladorPedidoMixin():
 
     '''Construtor da classe'''
@@ -22,6 +22,9 @@ class ManipuladorPedidoMixin():
 
 
     '''Método que cancela o pedido'''
-    def cancelarPedido(self,pedido):
-        pedido.status="Cancelado"
-        self.__del__()
+    def cancelarPedido(self,codigo):
+        #pedido = next(x for x in self.pedidos if x.get_codigo() == codigo )
+        for x in self.pedidos:
+            if x.codigo==codigo:
+                self.pedidos[x].status="Cancelado"
+                self.__del__()
