@@ -1,4 +1,4 @@
-from cliente import Cliente
+
 
 '''Classe que simula um pedido'''
 
@@ -11,7 +11,7 @@ class Pedido():
        self.__quantidade=quantidade
        self.__login=login
        self.status=status
-       self.codigo=codigo
+       self.__codigo=codigo
 
 #### Getters e Setters
 
@@ -23,6 +23,14 @@ class Pedido():
     @produto.setter
     def set_produto(self,produto):
         self.__produto=produto
+    '''Getter de codigo'''
+    def get_codigo(self):
+        return self.__codigo
+    '''setter de codigo'''
+
+    def set_codigo(self,codigo):
+        self.__codigo=codigo
+ 
     '''Getter de valor do produto'''
     @property
     def valorProduto(self):
