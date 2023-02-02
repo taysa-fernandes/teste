@@ -1,5 +1,5 @@
 from cliente import Cliente
-from pedido import Pedido
+from Pedido import Pedido
 from manipuladorDePedidoMixin import ManipuladorPedidoMixin
 from produto import Produto
 from conta import Conta

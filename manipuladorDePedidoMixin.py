@@ -47,11 +47,11 @@ class ManipuladorPedidoMixin():
 
 
     '''Método que cancela o pedido'''
-   def cancelarPedido(self,codigo):
+    def cancelarPedido(self,codigo):
         print("entrou")
         print(self.__pedidos)
         for i in range(len(self.__pedidos)):
-            if  self.__pedidos[i].codigo == codigo:
+            if  self.get_pedidos()[i].codigo == codigo:
                 self.__pedidos[i].status = "cancelado"
                 print(self.__pedidos)
                 del self.__pedidos[i]
@@ -60,16 +60,6 @@ class ManipuladorPedidoMixin():
                 break
             else:
                 print("não encontrado")
-            
-
-            '''pedido = next(x for x in self.__pedidos if x.get_codigo() == codigo )
-            pedido.set_status("cancelado")
-            print(self.__pedidos)'''
-    '''for x in self.__pedidos:
-            if x.codigo==codigo:
-                self.__pedidos[x].set_status("Cancelado")
-                self.__del__()
-                print(pedido)'''
 
 
     def __str__(self) -> str:

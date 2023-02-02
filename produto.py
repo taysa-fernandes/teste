@@ -2,8 +2,9 @@
 class Produto():
 
     '''Construtor da classe'''
-    def __init__(self, nome):
+    def __init__(self, nome,codigo=None):
         self.__nome = nome
+        self.codigo=codigo
 
     '''Getter de nome'''
     @property
