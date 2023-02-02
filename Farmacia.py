@@ -44,3 +44,6 @@ class Farmacia():
     @conta.setter
     def set_conta(self,conta):
         self.__conta=conta
+        
+    def __str__(self) -> str:
+        return f"Nome: {self.nome} Localização: {self.localizacao} CNPJ: {self.cnpj} Conta: {self.conta}"

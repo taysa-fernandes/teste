@@ -24,3 +24,6 @@ class Pagamento():
     @formaPagamento.setter
     def set_formaPagamento(self,formaPagamento):
         self.__formaPagamento=formaPagamento
+        
+    def __str__(self) -> str:
+        return f"Valor: {self.valor} Forma de Pagamento: {self.formaPagamento}"

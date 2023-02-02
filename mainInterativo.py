@@ -13,7 +13,9 @@ def pular_linhas():
 def category_cliente():
     pular_linhas()
     
-    print("============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n1.criar pedido\n2.cancelar pedido\n3.pagar pedido\n4.sair=================================================================")
+    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+1) Criar pedido\n2) Cancelar pedido\n3) Pagar pedido\n4) Sair\n
+=================================================================''')
     option = int(input())
     manipularPedido= ManipuladorPedidoMixin()
     if option == 1:
@@ -34,9 +36,13 @@ def category_cliente():
         codigo=input("Digite o código do pedido: \n")
         manipularPedido.pagarPedido(codigo)
         print(manipularPedido.get_pedidos)
+        
+        
 def category_operador():
     pular_linhas()
-    print("============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n1.criar pedido\n2cancelar pedido\n3.sair=================================================================")
+    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+1) Criar pedido\n2) Cancelar pedido\n4) Sair\n
+=================================================================''')
     option = int(input())
     manipularPedido= ManipuladorPedidoMixin()
 
@@ -51,9 +57,12 @@ def category_operador():
         manipularPedido.cancelarPedido(codigo)
         print(manipularPedido.get_pedidos)
        
+       
 def category_gerente():
     pular_linhas()
-    print("============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n1.Adicionar no estoque\n2.remover no estoque\n3.atualizar no estoque\n4.sair=================================================================")
+    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+1) Adicionar no estoque\n2) remover no estoque\n3) atualizar no estoque\n4) Sair\n
+=================================================================''')
     option=input()
     manipularEstoque=ManipuladorEstoqueMixin()
 
@@ -66,8 +75,11 @@ def category_gerente():
         pular_linhas()
         manipularEstoque.remover_estoque()
         print(manipularEstoque.estoques)
+        
 while True:
-    print("============ DIGITE O NÚMERO DA CATEGORIA DESEJADA: ============\n1.Cliente\n2.Operador\n3.Gerente\n4.Sair\n=================================================================")
+    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+1) Cliente\n2) Operador\n3) Gerente\n4) Sair\n
+=================================================================''')
     option = int(input())
     if option == 1:
         category_cliente()

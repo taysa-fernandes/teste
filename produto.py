@@ -21,3 +21,6 @@ class Produto():
     @quantidade.setter
     def set_nome(self, quantidade):
         self.__quantidade=quantidade
+        
+    def __str__(self) -> str:
+        return f"Nome: {self.nome} Quantidade: {self.quantidade}"

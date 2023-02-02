@@ -17,36 +17,35 @@ class Gerente(Pessoa,ManipuladorEstoqueMixin):
 
 
     '''Método que cria os operadores'''
-    ''' def criarOperador(self,operador):
+    def criarOperador(self,operador):
+        #gera um código aleatório para o operador
         codigoOperador=randint(0,10000)
-        print(codigoOperador)
+        print(codigoOperador) 
+        
         self.operadores.append(operador)
-        print("Operador criado!")'''
+        print("Operador criado!")
 
 
     '''Sobrescrevendo método que deleta instancia de objetos'''
-    '''def __del__(self):
-         print ("Removido")'''
+    def __del__(self):
+         print ("Removido")
 
 
     '''Método que apaga um operador'''
-    '''def removerOperador(self,operador):
+    def removerOperador(self,operador):
         operador.situacao="inativo"
-        self.__del__()
-        print("Operador removido!")'''
+        print("Operador removido!")
 
 
     '''Método que cria um cliente(usuário)'''
-    '''def criarCliente(self,cliente):
-        codigoCliente=randint(0,10000)
+    def criarCliente(self,cliente):
+        #gera um código aleatório para o cliente
+        codigoCliente=randint(0,10000) 
         print(codigoCliente)
         self.clientes.append(cliente)
-        print("Cliente criado!")'''
+        print("Cliente criado!")
+    
+    '''Método que escreve as informações da classe'''    
+    def __str__(self) -> str:
+        return f"Dados do Gerente: \nNome: {self.nome} Telefone: {self.telefone} CPF: {self.cpf} Conta: {self.conta}"
 
-        
-    '''Método que apaga um cliente(usuário)'''
-
-    '''def removerCliente(self,cliente):
-        cliente.situacao="inativo"
-        self.__del__()
-        print("Cliente removido!")'''

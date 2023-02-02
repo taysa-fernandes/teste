@@ -19,3 +19,6 @@ class ContaPoupanca(Conta):
     @rendimento.setter
     def set_redimento(self,rendimento):
         self.__rendimento=rendimento
+
+    def __str__(self) -> str:
+        return f"Rendimento Atual: {self.rendimento}"

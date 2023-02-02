@@ -19,3 +19,6 @@ class ContaCorrente(Conta):
     @taxa.setter
     def set_taxa(self,taxa):
         self.__taxa=taxa
+        
+    def __str__(self) -> str:
+        return f"Taxa Atual: {self.taxa}"

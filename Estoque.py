@@ -17,6 +17,9 @@ class Estoque:
             print("Produto:", self.getProdutos()[i].get("nome"), "\nQuantidade Em Estoque:", self.getProdutos()[i].get("quantidade"))
             print("-"*65)
 
+    def __str__(self) -> str:
+        return f"Produtos: {self.getProdutos()}"
+
 
 # produto = {
 #     "nome": "produto1",

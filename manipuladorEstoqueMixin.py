@@ -36,3 +36,5 @@ class ManipuladorEstoqueMixin():
               pass
         print("Produto atualizado!")    '''
     
+    def __str__(self) -> str:
+        return f"Estoques: {self.estoques}"

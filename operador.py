@@ -6,7 +6,7 @@ from manipuladorDePedidoMixin import ManipuladorPedidoMixin
 class Operador(Pessoa, ManipuladorPedidoMixin):
 
     '''Construtor da classe'''
-    def __init__(self, nome, telefone, cpf, conta, senha,matricula,salario,situacao="Ativo"):
+    def __init__(self, nome, telefone, cpf, conta, senha, matricula, salario, situacao="Ativo"):
         super().__init__(nome, telefone, cpf, conta, senha)
         self.__matricula=matricula
         self._salario=salario
@@ -30,3 +30,6 @@ class Operador(Pessoa, ManipuladorPedidoMixin):
     @salario.setter
     def set_salario(self,salario):
         self.__salario=salario
+        
+    def __str__(self) -> str:
+        return f"Matrícula: {self.matricula} Salário: {self.salario} Situação: {self.situacao}"

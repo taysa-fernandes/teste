@@ -53,3 +53,6 @@ class Pessoa():
     @senha.setter
     def set_senha(self,senha):
         self.__senha=senha
+        
+    def __str__(self) -> str:
+        return f"Nome: {self.nome} \nTelefone: {self.telefone} \nCPF: {self.cpf} \nConta: {self.conta}"

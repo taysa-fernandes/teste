@@ -69,3 +69,7 @@ class ManipuladorPedidoMixin():
                 self.__pedidos[x].set_status("Cancelado")
                 self.__del__()
                 print(pedido)'''
+
+
+    def __str__(self) -> str:
+        return f"{self.__pedidos}"

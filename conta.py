@@ -99,3 +99,7 @@ class Conta():
         self.status="inativo"
         self.transacoes.append("Conta desativada")
         self.transacoes.remove(f"Tirou extrado - saldo de {self.__saldo}")
+    
+    '''Método que escreve as informações da classe'''    
+    def __str__(self) -> str:
+        return f"Nome: {self.__nome}\nBanco: {self.__banco}\nNumero da conta: {self.__numeroConta}\nSaldo: {self.__saldo}\nLimite: {self.__limite}\nTipo: {self.tipo}\nStatus: {self.status}\n"
