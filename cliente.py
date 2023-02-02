@@ -1,6 +1,6 @@
 from Pessoa import Pessoa
 from manipuladorDePedidoMixin import ManipuladorPedidoMixin
-from pedido import Pedido
+from Pedido import Pedido
 
 
 '''Classe que simula um cliente(usuário)'''

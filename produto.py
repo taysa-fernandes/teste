@@ -2,9 +2,8 @@
 class Produto():
 
     '''Construtor da classe'''
-    def __init__(self, nome, quantidade):
+    def __init__(self, nome):
         self.__nome = nome
-        self.__quantidade = quantidade
 
     '''Getter de nome'''
     @property
@@ -23,4 +22,4 @@ class Produto():
         self.__quantidade=quantidade
         
     def __str__(self) -> str:
-        return f"Nome: {self.nome} Quantidade: {self.quantidade}"
+        return f"Nome: {self.nome}"

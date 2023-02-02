@@ -18,18 +18,18 @@ operador=Operador("jair", "(12)3485-7583", "467-759-388-90", conta2, NumbRand, 1
 gerente=Gerente("Lucas", "(56)95783-8964", "123-675-890-90", conta2, "esprin5")
 
 
-gerente.criarOperador(operador)
+'''gerente.criarOperador(operador)
 print(gerente.operadores, "\n")
 
 gerente.removerOperador(operador)
 print(operador.situacao, "\n")
-print(gerente.operadores, "\n")
+print(gerente.operadores, "\n")'''
 
 # gerente.criarCliente(cliente)
 # print(gerente.clientes, "\n")
-# manipularPedido= ManipuladorPedidoMixin()
-# manipularPedido.criarPedido(cliente.login)
-# manipularPedido.cancelarPedido(12)#muda o status mas n exlcui o objeto
+manipularPedido= ManipuladorPedidoMixin()
+manipularPedido.criarPedido(cliente.login)
+manipularPedido.cancelarPedido(12)#muda o status mas n exlcui o objeto
 # manipularPedido.pagarPedido(12)'''
 '''manipularEstoque=ManipuladorEstoqueMixin()
 manipularEstoque.add_estoque()

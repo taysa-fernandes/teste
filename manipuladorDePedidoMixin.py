@@ -1,5 +1,5 @@
 from random import randint
-from pedido import Pedido
+from Pedido import Pedido
 from produto import Produto
 '''Classe que controla pedidos'''
 class ManipuladorPedidoMixin():
@@ -31,32 +31,33 @@ class ManipuladorPedidoMixin():
         
         print("Pedido criado!")
     '''Método que paga um pedido'''
-    def pagarPedido(self,codigo):
-        for pedido in self.__pedidos:
-            print("entrou")
-            if  pedido.get_codigo()==codigo:
-                pedido.status="pago"
+    def cancelarPedido(self,codigo):
+        print("entrou")
+        print(self.__pedidos)
+        for i in range(len(self.__pedidos)):
+            if  self.__pedidos[i].codigo == codigo:
+                self.__pedidos[i].status = "cancelado"
                 print(self.__pedidos)
-                print(pedido.get_codigo())
-                print("pedido pago")
+                del self.__pedidos[i]
+                print("pedido cancelado")
+                print(self.__pedidos)
+                break
             else:
                 print("não encontrado")
 
 
     '''Método que cancela o pedido'''
-    def cancelarPedido(self,codigo):
+   def cancelarPedido(self,codigo):
         print("entrou")
         print(self.__pedidos)
-        for pedido in self.__pedidos:
-            print("chegou")
-            if  pedido.get_codigo()==codigo:
-                print("passou aq")
-                pedido.status="cancelado"
+        for i in range(len(self.__pedidos)):
+            if  self.__pedidos[i].codigo == codigo:
+                self.__pedidos[i].status = "cancelado"
                 print(self.__pedidos)
-                print(pedido.get_codigo())
-                del ManipuladorPedidoMixin.get_pedidos[pedido]
+                del self.__pedidos[i]
                 print("pedido cancelado")
-                return pedido
+                print(self.__pedidos)
+                break
             else:
                 print("não encontrado")
             
