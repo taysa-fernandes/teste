@@ -1,6 +1,7 @@
 '''Classe que manipula o estoque da farmácia'''
 from produto import Produto
 from random import randint
+from termcolor import colored
 class ManipuladorEstoqueMixin():
 
     '''Construtor da classe'''
@@ -15,7 +16,7 @@ class ManipuladorEstoqueMixin():
         self.estoques.append(produto)
         produto.codigo=19
         print(produto.codigo)
-        print("Produto adicionado em estoque!")
+        print(colored("Produto adicionado em estoque!","green"))
 
 
     '''Método que remove o produto do estoque'''
@@ -23,9 +24,9 @@ class ManipuladorEstoqueMixin():
         for j in range(len(self.estoques)):
             if self.estoques[j].codigo==codigo:
                 del self.estoques[j]
-                print("Produto removido do estoque!")
+                print(colored("Produto removido do estoque!","green"))
             else:
-                print("não encontrado")
+                print(colored("não encontrado","green"))
         
 
 
@@ -34,15 +35,15 @@ class ManipuladorEstoqueMixin():
          for j in range(len(self.estoques)):
                  self.add_estoque()
                  self.remover_estoque(codigo)
-                 print("Produto atualizado!")  
+                 print(colored("Produto atualizado!","green"))  
             
     
     def __str__(self) -> str:
         return f"Estoques: {self.estoques}"
 
-manipular=ManipuladorEstoqueMixin()
-manipular.add_estoque()
-print(manipular.estoques)
+#manipular=ManipuladorEstoqueMixin()
+#manipular.add_estoque()
+#print(manipular.estoques)
 # manipular.remover_estoque(19)
-print(manipular.estoques)
+#print(manipular.estoques)
 #manipular.atualizar_estoque(19)

@@ -1,6 +1,7 @@
 from random import randint
 from Pedido import Pedido
 from produto import Produto
+from termcolor import colored
 '''Classe que controla pedidos'''
 class ManipuladorPedidoMixin():
 
@@ -26,7 +27,7 @@ class ManipuladorPedidoMixin():
         pedido=Pedido(Produto,valor,quantidade,codigo)
         self.__pedidos.append(pedido)
         print(pedido.get_codigo())
-        print("Pedido criado!")
+        print(colored("Pedido criado!","green"))
         
         
     '''Método que paga um pedido'''
@@ -34,10 +35,10 @@ class ManipuladorPedidoMixin():
         for i in range(len(self.__pedidos)):
             if  self.get_pedidos()[i].codigo == codigo:
                 self.__pedidos[i].status = "pago"
-                print("pedido pago")
+                print(colored("pedido pago","green"))
                 break
             else:
-                print("não encontrado")
+                print(colored("não encontrado","red"))
 
 
     '''Método que cancela o pedido'''
@@ -46,10 +47,10 @@ class ManipuladorPedidoMixin():
             if  self.get_pedidos()[i].codigo == codigo:
                 self.__pedidos[i].status = "cancelado"
                 del self.__pedidos[i]
-                print("pedido cancelado")
+                print(colored("pedido cancelado","green"))
                 break
             else:
-                print("não encontrado")
+                print(colored("não encontrado","red"))
 
 
     def __str__(self) -> str:

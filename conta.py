@@ -1,5 +1,5 @@
 '''Classe que representa a conta ao qual irá ser realizado os pagamentos'''
-
+from termcolor import colored
 class Conta():
 
     '''Construtor da classe'''
@@ -61,10 +61,10 @@ class Conta():
     def emitirExtrato(self):
         if self.status=="ativo":
             self.transacoes.append(f"tirou extrado - saldo de {self.__saldo}")
-        print("-"*12,"Histórico","-"*12)
-        print(f"numero: {self.__numeroConta}\n saldo: {self.__saldo}")
+        print(colored("-"*12,"Histórico","-"*12,"Yellow"))
+        print(colored(f"numero: {self.__numeroConta}\n saldo: {self.__saldo}","Yellow"))
         for transacao in self.transacoes:
-            print(transacao)
+            print(colored(transacao,"Yellow"))
 
 
     '''Método que realiza um déposito de um valor em uma conta'''
