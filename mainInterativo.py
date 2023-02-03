@@ -5,7 +5,6 @@ from produto import Produto
 from conta import Conta
 from operador import Operador
 from manipuladorEstoqueMixin import ManipuladorEstoqueMixin
-list_pedidos=[]
 
 def pular_linhas():
     print("\n" * 130)

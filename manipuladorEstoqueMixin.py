@@ -40,9 +40,9 @@ class ManipuladorEstoqueMixin():
     def __str__(self) -> str:
         return f"Estoques: {self.estoques}"
 
-#manipular=ManipuladorEstoqueMixin()
-#manipular.add_estoque()
-#print(manipular.estoques)
-#manipular.remover_estoque(19)
-#print(manipular.estoques)
+manipular=ManipuladorEstoqueMixin()
+manipular.add_estoque()
+print(manipular.estoques)
+# manipular.remover_estoque(19)
+print(manipular.estoques)
 #manipular.atualizar_estoque(19)

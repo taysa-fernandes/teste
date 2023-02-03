@@ -8,7 +8,7 @@ class Estoque:
     def setProdutos(self, value):
         self.__produtos = value
 
-    def appendProduto(self, produto):
+    def add_Produto(self, produto):
         self.__produtos.append(produto)
 
     def gerarRelatorioDeEstoque(self):

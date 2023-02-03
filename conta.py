@@ -68,13 +68,13 @@ class Conta():
 
 
     '''Método que realiza um déposito de um valor em uma conta'''
-    def deposita(self, valor):
+    def depositar(self, valor):
         self.__saldo += valor
         self.transacoes.append("depósito de {}".format(valor))
 
 
     '''Método que realiza um saque de um valor em uma conta'''
-    def saca(self, valor):
+    def sacar(self, valor):
        if (self.saldo < valor):
         return False
        else:
