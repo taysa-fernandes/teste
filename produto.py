@@ -2,9 +2,9 @@
 class Produto():
 
     '''Construtor da classe'''
-    def __init__(self, nome,codigo=None):
+    def __init__(self, nome, codigo ):
         self.__nome = nome
-        self.codigo=codigo
+        self.codigo = codigo
 
     '''Getter de nome'''
     @property
@@ -22,5 +22,5 @@ class Produto():
     def set_nome(self, quantidade):
         self.__quantidade=quantidade
         
-    def __str__(self) -> str:
-        return f"Nome: {self.nome}"
+    def __str__(self):
+        return f"Nome: {self.nome} | Código: {self.codigo}"

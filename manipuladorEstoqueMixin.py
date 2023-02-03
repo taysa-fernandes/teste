@@ -1,48 +1,46 @@
 '''Classe que manipula o estoque da farmácia'''
 from produto import Produto
 from random import randint
-class ManipuladorEstoqueMixin():
 
-    '''Construtor da classe'''
+class ManipuladorEstoqueMixin:
     def __init__(self):
-        self.estoques=[]
+        self.estoques = []
 
-    codigoProduto=0
-    '''Método que adiciona produtos no estoque'''
     def add_estoque(self):
-        nome=input("Informe o nome do produto: ")
-        produto=Produto(nome)
+        nome = input("Informe o nome do produto: ")
+        codigo = randint(1, 100)
+        produto = Produto(nome, codigo)
         self.estoques.append(produto)
-        produto.codigo=19
-        print(produto.codigo)
-        print("Produto adicionado em estoque!")
+        print(f"Produto adicionado ao estoque: {produto}")
+
+    def remover_estoque(self, codigo):
+        for i, estoque in enumerate(self.estoques):
+            if estoque.codigo == codigo:
+                del self.estoques[i]
+                print(f"Produto com código {codigo} removido do estoque.")
+                break
+        else:
+            print(f"Não foi encontrado um produto com código {codigo} no estoque.")
+
+    def atualizar_estoque(self, codigo):
+        for i, estoque in enumerate(self.estoques):
+            if estoque.codigo == codigo:
+                nome = input("Informe o novo nome do produto: ")
+                self.estoques[i].nome == nome
+                print(f"Produto com código {codigo} atualizado no estoque.")
+                break
+        else:
+            print(f"Não foi encontrado um produto com código {codigo} no estoque.")
 
 
-    '''Método que remove o produto do estoque'''
-    def remover_estoque(self,codigo):
-        for j in range(len(self.estoques)):
-            if self.estoques[j].codigo==codigo:
-                del self.estoques[j]
-                print("Produto removido do estoque!")
-            else:
-                print("não encontrado")
-        
+manipular = ManipuladorEstoqueMixin()
+manipular.add_estoque()
+print(manipular.estoques)
 
+codigo_produto = int(input("Informe o código do produto que deseja remover: "))
+manipular.remover_estoque(codigo_produto)
+print(*manipular.estoques)
 
-    '''Método que atualiza informações de produto em estoque'''
-    def atualizar_estoque(self,codigo):
-         for j in range(len(self.estoques)):
-                 self.add_estoque()
-                 self.remover_estoque(codigo)
-                 print("Produto atualizado!")  
-            
-    
-    def __str__(self) -> str:
-        return f"Estoques: {self.estoques}"
-
-#manipular=ManipuladorEstoqueMixin()
-#manipular.add_estoque()
-#print(manipular.estoques)
-#manipular.remover_estoque(19)
-#print(manipular.estoques)
-#manipular.atualizar_estoque(19)
+codigo_produto = int(input("Informe o código do produto que deseja atualizar: "))
+manipular.atualizar_estoque(codigo_produto)
+print(*manipular.estoques)
