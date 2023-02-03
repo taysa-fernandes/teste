@@ -20,8 +20,7 @@ def category_cliente():
     manipularPedido= ManipuladorPedidoMixin()
     if option == 1:
         pular_linhas()
-        login=input("Digite o seu login: \n")
-        manipularPedido.criarPedido(login)
+        manipularPedido.criarPedido()
         print(manipularPedido.get_pedidos)
         
     if option==2:

@@ -17,30 +17,24 @@ class ManipuladorPedidoMixin():
         self.__pedidos=pedidos
 
     '''Método que cria pedido'''
-    def criarPedido(self,login):
-        codigo=12
+    def criarPedido(self):
+        codigo=randint(0,10000)
         produto=input("Digite o produto: ")
         Produto(produto)
         valor=input("Digite o valor: ")
         quantidade=input("Digite a quantidade: ")
-        pedido=Pedido(Produto,valor,quantidade,login,codigo)
+        pedido=Pedido(Produto,valor,quantidade,codigo)
         self.__pedidos.append(pedido)
-        print(self.__pedidos)
         print(pedido.get_codigo())
-        return pedido
-        
         print("Pedido criado!")
+        
+        
     '''Método que paga um pedido'''
-    def cancelarPedido(self,codigo):
-        print("entrou")
-        print(self.__pedidos)
+    def pagarPedido(self,codigo):
         for i in range(len(self.__pedidos)):
-            if  self.__pedidos[i].codigo == codigo:
-                self.__pedidos[i].status = "cancelado"
-                print(self.__pedidos)
-                del self.__pedidos[i]
-                print("pedido cancelado")
-                print(self.__pedidos)
+            if  self.get_pedidos()[i].codigo == codigo:
+                self.__pedidos[i].status = "pago"
+                print("pedido pago")
                 break
             else:
                 print("não encontrado")

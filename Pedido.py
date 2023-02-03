@@ -5,11 +5,10 @@
 class Pedido():
 
     '''Construtor da classe'''
-    def __init__(self,produto,valorProduto,quantidade,login,codigo=None,status="Aguardando pagamento"):
+    def __init__(self,produto,valorProduto,quantidade,codigo=None,status="Aguardando pagamento"):
        self.__produto=produto
        self.__valorProduto=valorProduto
        self.__quantidade=quantidade
-       self.__login=login
        self.status=status
        self.__codigo=codigo
 
@@ -47,14 +46,6 @@ class Pedido():
     @quantidade.setter
     def set_quantidade(self,quantidade):
         self.__quantidade=quantidade
-    '''Getter de cliente'''
-    @property
-    def login(self):
-        return self.__login
-    '''setter de cliente'''
-    @login.setter
-    def set_login(self,login):
-        self.__login=login
 
 
     '''método que escreve as informações da classe'''

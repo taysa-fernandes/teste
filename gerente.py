@@ -26,11 +26,6 @@ class Gerente(Pessoa,ManipuladorEstoqueMixin):
         print("Operador criado!")
 
 
-    '''Sobrescrevendo método que deleta instancia de objetos'''
-    def __del__(self):
-         print ("Removido")
-
-
     '''Método que apaga um operador'''
     def removerOperador(self,operador):
         operador.situacao="inativo"
