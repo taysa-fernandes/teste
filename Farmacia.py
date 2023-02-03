@@ -9,6 +9,7 @@ class Farmacia():
         self.__cnpj=cnpj
         self.__conta=conta
         self.pedidos=[]
+        self.operadores=[]
 
 #### Getters e Setters
 

@@ -5,7 +5,7 @@ from produto import Produto
 from conta import Conta
 from operador import Operador
 from manipuladorEstoqueMixin import ManipuladorEstoqueMixin
-list_pedidos=[]
+from termcolor import colored
 
 def pular_linhas():
     print("\n" * 130)
@@ -13,9 +13,9 @@ def pular_linhas():
 def category_cliente():
     pular_linhas()
     
-    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+    print(colored('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
 1) Criar pedido\n2) Cancelar pedido\n3) Pagar pedido\n4) Sair\n
-=================================================================''')
+=================================================================''',"red"))
     option = int(input())
     manipularPedido= ManipuladorPedidoMixin()
     if option == 1:
@@ -39,9 +39,9 @@ def category_cliente():
         
 def category_operador():
     pular_linhas()
-    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+    print(colored('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
 1) Criar pedido\n2) Cancelar pedido\n4) Sair\n
-=================================================================''')
+=================================================================''',"red"))
     option = int(input())
     manipularPedido= ManipuladorPedidoMixin()
 
@@ -59,9 +59,9 @@ def category_operador():
        
 def category_gerente():
     pular_linhas()
-    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+    print(colored('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
 1) Adicionar no estoque\n2) remover no estoque\n3) atualizar no estoque\n4) Sair\n
-=================================================================''')
+=================================================================''',"red"))
     option=input()
     manipularEstoque=ManipuladorEstoqueMixin()
 
@@ -76,9 +76,9 @@ def category_gerente():
         print(manipularEstoque.estoques)
         
 while True:
-    print('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
+    print(colored('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
 1) Cliente\n2) Operador\n3) Gerente\n4) Sair\n
-=================================================================''')
+=================================================================''',"red"))
     option = int(input())
     if option == 1:
         category_cliente()

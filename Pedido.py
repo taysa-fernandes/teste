@@ -50,9 +50,9 @@ class Pedido():
 
     '''método que escreve as informações da classe'''
     def __str__(self):
-        return ("Produto: {}\nValor: {}\nQuantidade: {}\n,login: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__login,self.status))
+        return ("Produto: {}\nValor: {}\nQuantidade: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.status))
 
 
     '''Método que sobrescreve o str e o passa para classe que utiliza a classe Pedido'''
     def __repr__(self):
-         return ("Produto: {}\nValor: {}\nQuantidade: {}\n,login: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.__login,self.status))
+         return ("Produto: {}\nValor: {}\nQuantidade: {}\nStatus: {}".format(self.__produto,self.__valorProduto,self.__quantidade,self.status))

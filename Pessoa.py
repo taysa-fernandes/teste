@@ -4,12 +4,11 @@ from conta import Conta
 class Pessoa():
 
     '''Construtor da classe'''
-    def __init__(self,nome,telefone,cpf,conta,senha):
+    def __init__(self,nome,telefone,cpf,conta):
         self.__nome=nome
         self.__telefone=telefone
         self.__cpf=cpf
         self.__conta=conta
-        self.__senha=senha
 
 #### Getters e Setters
         
@@ -45,14 +44,6 @@ class Pessoa():
     @conta.setter
     def set_conta(self,conta):
         self.__conta=conta
-    '''getter de taxa'''
-    @property
-    def senha(self):
-        return self.__senha
-    '''setter de senha'''
-    @senha.setter
-    def set_senha(self,senha):
-        self.__senha=senha
         
     def __str__(self) -> str:
         return f"Nome: {self.nome} \nTelefone: {self.telefone} \nCPF: {self.cpf} \nConta: {self.conta}"
