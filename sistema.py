@@ -1,4 +1,5 @@
 class Sistema():
+    # Construtor
     def __init__(self):
         self.__clientes = []
         self.__operadores = []

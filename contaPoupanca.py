@@ -1,4 +1,4 @@
-from conta import Conta
+from Conta import Conta
 
 '''Classe Conta poupança que implementa o tipo da classe Conta'''
 

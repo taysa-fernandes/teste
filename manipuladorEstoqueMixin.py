@@ -1,5 +1,5 @@
 '''Classe que manipula o estoque da farmácia'''
-from produto import Produto
+from Produto import Produto
 from random import randint
 from termcolor import colored
 class ManipuladorEstoqueMixin:

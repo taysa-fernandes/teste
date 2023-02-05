@@ -1,11 +1,11 @@
 import uuid
 
-from cliente import Cliente
-from conta import Conta
-from gerente import Gerente
-from manipuladorDePedidoMixin import ManipuladorPedidoMixin
-from manipuladorEstoqueMixin import ManipuladorEstoqueMixin
-from operador import Operador
+from Cliente import Cliente
+from Conta import Conta
+from Gerente import Gerente
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
+from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
+from Operador import Operador
 
 '''Gerar Automaticamente uma matricula para o cliente'''
 NumbRand = uuid.uuid1()

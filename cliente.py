@@ -1,5 +1,5 @@
 from Pessoa import Pessoa
-from manipuladorDePedidoMixin import ManipuladorPedidoMixin
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
 from Pedido import Pedido
 
 

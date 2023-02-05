@@ -1,10 +1,10 @@
-from cliente import Cliente
+from Cliente import Cliente
 from Pedido import Pedido
-from manipuladorDePedidoMixin import ManipuladorPedidoMixin
-from produto import Produto
-from conta import Conta
-from operador import Operador
-from manipuladorEstoqueMixin import ManipuladorEstoqueMixin
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
+from Produto import Produto
+from Conta import Conta
+from Operador import Operador
+from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
 from termcolor import colored
 
 def pular_linhas():

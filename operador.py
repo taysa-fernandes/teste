@@ -1,5 +1,5 @@
 from Pessoa import Pessoa
-from manipuladorDePedidoMixin import ManipuladorPedidoMixin
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
 
 '''Classe que simula o operador de caixa de uma farmácia'''
 

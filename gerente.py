@@ -1,7 +1,7 @@
-from operador import Operador
-from cliente import Cliente
+from Operador import Operador
+from Cliente import Cliente
 from Pessoa import Pessoa
-from manipuladorEstoqueMixin import ManipuladorEstoqueMixin
+from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
 from random import randint
 
 '''Classe que simula um gerente de uma farmácia'''

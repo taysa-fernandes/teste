@@ -1,4 +1,4 @@
-from conta import Conta
+from Conta import Conta
 
 '''Classe que representa uma pessoa na vida real'''
 class Pessoa():

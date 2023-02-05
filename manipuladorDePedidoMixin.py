@@ -1,6 +1,6 @@
 from random import randint
 from Pedido import Pedido
-from produto import Produto
+from Produto import Produto
 from termcolor import colored
 '''Classe que controla pedidos'''
 class ManipuladorPedidoMixin():
