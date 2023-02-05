@@ -50,9 +50,9 @@ class Sistema():
     def set_gerentes(self, value):
         self.__gerentes = value
 
-t = Sistema()
+# t = Sistema()
 
-t.registrarCliente("teste")
-print(map(t.get_clientes()))
+# t.registrarCliente("teste")
+# print(map(t.get_clientes()))
 
-t.removerCliente("teste")
+# t.removerCliente("teste")
