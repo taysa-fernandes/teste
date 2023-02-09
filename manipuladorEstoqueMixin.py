@@ -1,8 +1,5 @@
 '''Classe que manipula o estoque da farmácia'''
-<<<<<<< HEAD
-=======
-from Produto import Produto
->>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82
+from produto import Produto
 from random import randint
 
 from termcolor import colored

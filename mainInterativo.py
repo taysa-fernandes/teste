@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-from Cliente import Cliente
-from Pedido import Pedido
-from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
-from Produto import Produto
-from Conta import Conta
-from Operador import Operador
-from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
->>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82
 from termcolor import colored
 
 from cliente import Cliente
@@ -20,7 +10,7 @@ from produto import Produto
 
 
 def pular_linhas():
-    print("\n" * 130)
+    print("\n" * 60)
 
 def category_cliente():
     pular_linhas()
@@ -59,9 +49,9 @@ def category_operador():
 
     if option == 1:
         pular_linhas()
-        matricula=input("Digite a sua matricula: \n")
-        manipularPedido.criarPedido(matricula)
+        manipularPedido.criarPedido()
         print(manipularPedido.get_pedidos)
+        
     if option == 2:
         pular_linhas()
         codigo=input("Digite o codigo do pedido que deseja cancelar: \n")
@@ -74,7 +64,7 @@ def category_gerente():
     print(colored('''============ DIGITE O NÚMERO DA OPERAÇÃO DESEJADA: ============\n
 1) Adicionar no estoque\n2) remover no estoque\n3) atualizar no estoque\n4) Sair\n
 =================================================================''',"magenta"))
-    option=input()
+    option=int(input())
     manipularEstoque=ManipuladorEstoqueMixin()
 
     if option==1:
@@ -84,7 +74,14 @@ def category_gerente():
 
     if option==2:
         pular_linhas()
-        manipularEstoque.remover_estoque()
+        codigo = input('Digite o código do produto que deseja remover: ')
+        manipularEstoque.remover_estoque(codigo)
+        print(manipularEstoque.estoques)
+        
+    if option==3:
+        pular_linhas()
+        codigo = input('Digite o código do produto que deseja atualizar: ')
+        manipularEstoque.atualizar_estoque(codigo)
         print(manipularEstoque.estoques)
         
 while True:
@@ -99,4 +96,5 @@ while True:
     if option==3:
         category_gerente()
     if option >= 4 or  option < 1:
+        print(colored("Até logo! （*＾-＾*）","red"))
         break

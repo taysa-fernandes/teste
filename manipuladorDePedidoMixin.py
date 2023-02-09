@@ -22,14 +22,14 @@ class ManipuladorPedidoMixin():
 
     '''Método que cria pedido'''
     def criarPedido(self):
-        codigo=randint(0,10000)
+        codigo=randint(0,20)
         produto=input("Digite o produto: ")
         Produto(produto)
         valor=input("Digite o valor: ")
         quantidade=input("Digite a quantidade: ")
-        pedido=Pedido(Produto,valor,quantidade,codigo)
+        pedido=Pedido(produto, valor, quantidade, codigo)
         self.__pedidos.append(pedido)
-        print(pedido.get_codigo())
+        print("O Codigo do seu pedido: ", pedido.get_codigo())
         print(colored("Pedido criado!","green"))
         
         

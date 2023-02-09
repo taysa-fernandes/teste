@@ -2,7 +2,7 @@
 class Produto():
 
     '''Construtor da classe'''
-    def __init__(self, nome, codigo = None ):
+    def __init__(self, nome, codigo = None, *args,**kwargs):
         self.__nome = nome
         self.codigo = codigo
 

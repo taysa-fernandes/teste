@@ -1,6 +1,5 @@
 from termcolor import colored
 
-
 class Estoque:
     def __init__(self, produtos=[]):
         self.__produtos = produtos
