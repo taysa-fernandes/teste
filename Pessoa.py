@@ -4,11 +4,11 @@ from conta import Conta
 class Pessoa():
 
     '''Construtor da classe'''
-    def __init__(self,nome,telefone,cpf,conta):
-        self.__nome=nome
-        self.__telefone=telefone
-        self.__cpf=cpf
-        self.__conta=conta
+    def __init__(self, nome, telefone, cpf, conta):
+        self.__nome = nome
+        self.__telefone = telefone
+        self.__cpf = cpf
+        self.__conta = conta
 
 #### Getters e Setters
         
