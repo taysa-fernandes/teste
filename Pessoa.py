@@ -1,14 +1,14 @@
-from Conta import Conta
+from conta import Conta
 
 '''Classe que representa uma pessoa na vida real'''
 class Pessoa():
 
     '''Construtor da classe'''
-    def __init__(self,nome,telefone,cpf,conta):
-        self.__nome=nome
-        self.__telefone=telefone
-        self.__cpf=cpf
-        self.__conta=conta
+    def __init__(self, nome, telefone, cpf, conta):
+        self.__nome = nome
+        self.__telefone = telefone
+        self.__cpf = cpf
+        self.__conta = conta
 
 #### Getters e Setters
         

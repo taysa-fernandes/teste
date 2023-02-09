@@ -1,7 +1,11 @@
 '''Classe que manipula o estoque da farmácia'''
-from Produto import Produto
 from random import randint
+
 from termcolor import colored
+
+from produto import Produto
+
+
 class ManipuladorEstoqueMixin:
     def __init__(self):
         self.estoques = []
@@ -31,16 +35,3 @@ class ManipuladorEstoqueMixin:
                 break
         else:
             print(colored(f"Não foi encontrado um produto com código {codigo} no estoque.","red"))
-
-
-'''manipular = ManipuladorEstoqueMixin()
-manipular.add_estoque()
-print(manipular.estoques)
-
-codigo_produto = int(input("Informe o código do produto que deseja remover: "))
-manipular.remover_estoque(codigo_produto)
-print(*manipular.estoques)
-
-codigo_produto = int(input("Informe o código do produto que deseja atualizar: "))
-manipular.atualizar_estoque(codigo_produto)
-print(*manipular.estoques)'''

@@ -1,15 +1,14 @@
-from Pessoa import Pessoa
-from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
+from manipuladorDePedidoMixin import ManipuladorPedidoMixin
 from Pedido import Pedido
-
+from Pessoa import Pessoa
 
 '''Classe que simula um cliente(usuário)'''
 
 class Cliente(Pessoa, ManipuladorPedidoMixin):
 
     '''Construtor da classe'''
-    def __init__(self, nome, telefone, cpf, conta, senha):
-        super().__init__(nome, telefone, cpf, conta, senha)
+    def __init__(self, nome, telefone, cpf, conta):
+        super().__init__(nome, telefone, cpf, conta)
         self.__pedidos=[]
 
     '''Método que escreve as informações da classe'''

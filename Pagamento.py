@@ -2,9 +2,9 @@
 class Pagamento():
 
     '''Construtor da classe'''
-    def __init__(self,valor,formaPagamento):
-        self.__valor=valor
-        self.__formaPagamento=formaPagamento
+    def __init__(self, valor, formaPagamento):
+        self.__valor = valor
+        self.__formaPagamento = formaPagamento
 
 #### Getters e Setters
         
@@ -26,4 +26,4 @@ class Pagamento():
         self.__formaPagamento=formaPagamento
         
     def __str__(self) -> str:
-        return f"Valor: {self.valor} Forma de Pagamento: {self.formaPagamento}"
+        return f"Valor: {self.valor}, Forma de Pagamento: {self.formaPagamento}"

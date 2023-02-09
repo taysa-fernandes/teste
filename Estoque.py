@@ -1,4 +1,6 @@
 from termcolor import colored
+
+
 class Estoque:
     def __init__(self, produtos=[]):
         self.__produtos = produtos
@@ -21,23 +23,5 @@ class Estoque:
     def __str__(self) -> str:
         return f"Produtos: {self.getProdutos()}"
 
-
-# produto = {
-#     "nome": "produto1",
-#     "quantidade": 100,
-# }
-# produto2 = {
-#     "nome": "produto2",
-#     "quantidade": 130,
-# }
-
-# e = Estoque()
-# e.appendProduto(produto)
-# e.appendProduto(produto2)
-
-# for i in range(len(e.getProdutos())):
-#     print(e.getProdutos()[i])
-
-# e.gerarRelatorioDeEstoque()
 
 

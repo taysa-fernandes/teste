@@ -1,4 +1,4 @@
-from Conta import Conta
+from conta import Conta
 
 '''Classe Conta corrente que implementa o tipo da classe Conta'''
 

@@ -1,5 +1,7 @@
 '''Classe que representa a conta ao qual irá ser realizado os pagamentos'''
 from termcolor import colored
+
+
 class Conta():
 
     '''Construtor da classe'''

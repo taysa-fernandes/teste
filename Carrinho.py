@@ -1,5 +1,6 @@
-from Produto import Produto
 from Pedido import Pedido
+from produto import Produto
+
 
 class Carrinho:
     def __init__(self, pedidos=[], formaPagamento="Cartão"):
@@ -36,14 +37,4 @@ class Carrinho:
             aux += self.__pedidos.valorProduto
         return aux
 
-
-# c = Carrinho()
-# p = Produto("Produto 1", 123412)
-# pd  = Pedido(p, 100, 2, 218)
-
-
-# c.adicionarItem(pd)
-# c.consultarCarrinho()
-# c.removerItem(pd)
-# c.consultarCarrinho()
 
