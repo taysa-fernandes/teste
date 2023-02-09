@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from manipuladorDePedidoMixin import ManipuladorPedidoMixin
 from Pessoa import Pessoa
+=======
+from Pessoa import Pessoa
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
+>>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82
 
 '''Classe que simula o operador de caixa de uma farmácia'''
 

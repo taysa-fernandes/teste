@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+from Cliente import Cliente
+from Pedido import Pedido
+from ManipuladorDePedidoMixin import ManipuladorPedidoMixin
+from Produto import Produto
+from Conta import Conta
+from Operador import Operador
+from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
+>>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82
 from termcolor import colored
 
 from cliente import Cliente

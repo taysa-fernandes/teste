@@ -38,3 +38,16 @@ class Carrinho:
         return aux
 
 
+<<<<<<< HEAD
+=======
+# c = Carrinho()
+# p = Produto("Produto 1", 123412)
+# pd  = Pedido(p, 100, 2, 218)
+
+
+# c.adicionarItem(pd)
+# c.consultarCarrinho()
+# c.removerItem(pd)
+# c.consultarCarrinho()
+
+>>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82

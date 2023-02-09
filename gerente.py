@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+from Operador import Operador
+from Cliente import Cliente
+from Pessoa import Pessoa
+from ManipuladorEstoqueMixin import ManipuladorEstoqueMixin
+>>>>>>> 041aa4ddedd50fc1e00fbae686bb622e92abca82
 from random import randint
 
 from cliente import Cliente
