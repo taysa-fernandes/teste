@@ -12,11 +12,11 @@ class Carrinho:
         print("Itens Adicionados:\n")
         if (len(self.__pedidos) > 0):
             for i in range(len(self.__pedidos)):
-                print(
+                print(int(
                     self.__pedidos[i].produto.nome,
                     "--- UND R$", self.__pedidos[i].valorProduto,
                     "--- QTD", self.__pedidos[i].quantidade,
-                    "--- TOTAL: R$", self.__pedidos[i].valorProduto * self.__pedidos[i].quantidade)
+                    "--- TOTAL: R$", self.__pedidos[i].valorProduto * self.__pedidos[i].quantidade))
             print("\n")
         else:
             print("O carrinho está vazio!")
@@ -35,6 +35,8 @@ class Carrinho:
         aux = 0
         for i in range(len(self.__pedidos)):
             aux += self.__pedidos.valorProduto
-        return aux
+        return f'O valor total é: R$ {aux}'
+    
+    
 
 
