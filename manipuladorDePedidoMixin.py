@@ -1,5 +1,5 @@
 from random import randint
-
+from json import json
 from termcolor import colored
 
 from Pedido import Pedido
@@ -31,7 +31,6 @@ class ManipuladorPedidoMixin():
         self.__pedidos.append(pedido)
         print("O Codigo do seu pedido: ", pedido.get_codigo())
         print(colored("Pedido criado!","green"))
-        
         
     '''Método que paga um pedido'''
     def pagarPedido(self,codigo):
