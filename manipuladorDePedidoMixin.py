@@ -1,5 +1,4 @@
 from random import randint
-from json import json
 from termcolor import colored
 
 from Pedido import Pedido

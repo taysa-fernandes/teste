@@ -8,8 +8,10 @@ from operador import Operador
 from Pedido import Pedido
 from produto import Produto
 from Carrinho import Carrinho
-
-
+produto=Produto("ovo")
+produto2=Produto("lápis")
+list_pedidos=[Pedido(produto,12.00,3,12),Pedido(produto2,3.14,2,23)]
+list_estoques=[]
 def pular_linhas():
     print("\n" * 60)
 
